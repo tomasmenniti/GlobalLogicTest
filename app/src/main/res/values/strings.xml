@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Global Logic Test</string>
+
+    <string name="welcome">Welcome!</string>
+    <string name="service_error">An error has occurred. Please try again later!</string>
+
+    <string name="item_details">Item details</string>
+</resources>

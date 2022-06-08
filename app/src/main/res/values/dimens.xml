@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="zeroDp">0dp</dimen>
+    <dimen name="lineSpacingDimen">3dp</dimen>
+    <dimen name="smallBorderDimen">10dp</dimen>
+    <dimen name="mediumBorderDimen">20dp</dimen>
+    <dimen name="barDimen">50dp</dimen>
+    <dimen name="imageDimen">80dp</dimen>
+    <dimen name="fullImageDimen">300dp</dimen>
+
+    <dimen name="titleDimen">16sp</dimen>
+</resources>

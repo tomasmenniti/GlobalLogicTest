@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activities.ItemDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/barDimen"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:elevation="@dimen/smallBorderDimen"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/smallBorderDimen"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mediumBorderDimen"
+                android:text="@string/item_details"
+                android:textColor="@color/black"
+                android:textSize="@dimen/titleDimen"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imgBack"
+                app:layout_constraintStart_toEndOf="@+id/imgBack"
+                app:layout_constraintTop_toTopOf="@+id/imgBack" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtItemTitle"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mediumBorderDimen"
+            android:layout_marginTop="@dimen/mediumBorderDimen"
+            android:layout_marginEnd="@dimen/mediumBorderDimen"
+            android:contentDescription="@string/app_name"
+            android:lineSpacingExtra="@dimen/lineSpacingDimen"
+            android:maxLength="70"
+            android:singleLine="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/titleDimen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintTopBar"
+            tools:text="Title" />
+
+        <ImageView
+            android:id="@+id/imgItem"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="@dimen/fullImageDimen"
+            android:layout_marginTop="@dimen/mediumBorderDimen"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="@+id/txtItemTitle"
+            app:layout_constraintStart_toStartOf="@+id/txtItemTitle"
+            app:layout_constraintTop_toBottomOf="@+id/txtItemTitle"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/txtItemDescription"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mediumBorderDimen"
+            android:layout_marginBottom="@dimen/mediumBorderDimen"
+            android:lineSpacingExtra="@dimen/lineSpacingDimen"
+            android:singleLine="false"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imgItem"
+            app:layout_constraintStart_toStartOf="@+id/imgItem"
+            app:layout_constraintTop_toBottomOf="@+id/imgItem"
+            tools:text="Description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

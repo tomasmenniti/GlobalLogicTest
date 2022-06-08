@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/smallBorderDimen"
+        android:layout_marginTop="@dimen/smallBorderDimen"
+        android:layout_marginEnd="@dimen/smallBorderDimen"
+        android:layout_marginBottom="@dimen/smallBorderDimen"
+        android:elevation="@dimen/smallBorderDimen"
+        app:cardCornerRadius="@dimen/smallBorderDimen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgItem"
+                android:layout_width="@dimen/imageDimen"
+                android:layout_height="@dimen/imageDimen"
+                android:layout_marginStart="@dimen/mediumBorderDimen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/linearItemInformation"
+                tools:src="@drawable/ic_launcher_background" />
+
+            <LinearLayout
+                android:id="@+id/linearItemInformation"
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mediumBorderDimen"
+                android:layout_marginTop="@dimen/mediumBorderDimen"
+                android:layout_marginEnd="@dimen/mediumBorderDimen"
+                android:layout_marginBottom="@dimen/mediumBorderDimen"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgItem"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvItemTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/lineSpacingDimen"
+                    android:singleLine="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/titleDimen"
+                    tools:text="Title" />
+
+                <TextView
+                    android:id="@+id/tvItemDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/smallBorderDimen"
+                    android:lineSpacingExtra="@dimen/lineSpacingDimen"
+                    android:maxLines="6"
+                    android:singleLine="false"
+                    tools:text="Description" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
